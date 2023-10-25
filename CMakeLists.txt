@@ -30,7 +30,7 @@ FIND_PACKAGE(OpenSSL)
 FIND_PACKAGE(ZLIB)
 FIND_PACKAGE(CURL)
 
-SET(CMAKE_INSTALL_PREFIX "/home/user/mysoftware")
+SET(CMAKE_INSTALL_PREFIX "/usr/local/apr/include/apr-1")
 
 # Options for support libraries not supported by cmake-bundled FindFOO
 
