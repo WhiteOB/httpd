@@ -30,6 +30,8 @@ FIND_PACKAGE(OpenSSL)
 FIND_PACKAGE(ZLIB)
 FIND_PACKAGE(CURL)
 
+SET(CMAKE_INSTALL_PREFIX "/home/user/mysoftware")
+
 # Options for support libraries not supported by cmake-bundled FindFOO
 
 # Default to using APR trunk (libapr-2.lib) if it exists in PREFIX/lib;
@@ -99,7 +101,7 @@ ELSE()
   SET(default_jansson_libraries)
 ENDIF()
 
-SET(APR_INCLUDE_DIR       "${CMAKE_INSTALL_PREFIX}/apr" CACHE STRING "Directory with APR[-Util] include files")
+SET(APR_INCLUDE_DIR       "${CMAKE_INSTALL_PREFIX}/include" CACHE STRING "Directory with APR[-Util] include files")
 SET(APR_LIBRARIES         ${default_apr_libraries}       CACHE STRING "APR libraries to link with")
 SET(NGHTTP2_INCLUDE_DIR   "${CMAKE_INSTALL_PREFIX}/include" CACHE STRING "Directory with NGHTTP2 include files within nghttp2 subdirectory")
 SET(NGHTTP2_LIBRARIES     ${default_nghttp2_libraries}   CACHE STRING "NGHTTP2 libraries to link with")
